@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="node_modules/font-awesome/css/font-awesome.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script type="text/javascript" src="node_modules/jquery/dist/jquery.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
+  <title>Project | BookLook</title>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6">
+        <h1>BookLook <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></h1>
+        <hr />
+        <div class="search-results">
+        </div>
+        <h3>Search by ISBN</h3>
+        <div class="form-group">
+          <input class= "form-control" type="text" name="search-bar" placeholder="Enter ISBN number">
+          <button class="btn btn-primary" type="button" id="search-btn">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script id="search-template" type="text/x-handlebars-template">
+    <h1>{{ title }}</h1>
+    <p>{{ description }}</p>
+    <h3>Written by: {{ author }}</h3>
+    <img src="{{ image }}"/>
+  </script>
+  <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
