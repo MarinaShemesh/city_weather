@@ -1,10 +1,10 @@
 /* Let's go FETCH our data */
 
-var fetch = function () {
+var fetch = function (isbn) {
   console.log("button clicked");
   $.ajax({
     method: "GET",
-    url: 'https://www.googleapis.com/books/v1/volumes?q=isbn:0439023521',
+    url: 'https://www.googleapis.com/books/v1/volumes?q=isbn:'+ isbn,
     dataType: "json",
     success: function(data) {
       newResult(data);
@@ -24,4 +24,14 @@ var newResult = function(data) {
   $('.search-results').append(newHTML);
 }
 
-$('#search-btn').on('click', fetch);
+$('#search-btn').on('click', function() {
+  var isbn = $('.search-bar').val();
+  $('.search-results').empty();
+  if (isbn.length > 0) {
+    fetch(isbn);
+    console.log(isbn);
+  } else {
+    alert("Don't forget to enter an ISBN!")
+  }
+
+});
