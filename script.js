@@ -3,7 +3,7 @@ var temps = [];
 var fetch = function (city){//1.first get /"fetch" the information
     $.ajax({
       method: "GET",
-      url: "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=d703871f861842b79c60988ccf3b17ec",
+      url: "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=add_your_api_key",
       dataType: "json",
       success: function(data) {
           //console.log(data);
