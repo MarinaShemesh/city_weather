@@ -1,35 +1,40 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.css">
-  <link rel="stylesheet" type="text/css" href="node_modules/font-awesome/css/font-awesome.css">
+  <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="style.css">
-  <script type="text/javascript" src="node_modules/jquery/dist/jquery.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
-  <title>Project | BookLook</title>
+  <link rel="stylesheet" type="text/css" href="node_modules/font-awesome/css/font-awesome.min.css">
+  <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
+  <title>Weather App</title>
 </head>
-<body>
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-6">
-        <h1>BookLook <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></h1>
-        <hr />
-        <div class="search-results">
-        </div>
-        <h3>Search by ISBN</h3>
-        <div class="form-group">
-          <input class= "form-control search-bar" type="text" name="search-bar" placeholder="Enter ISBN number">
-          <button class="btn btn-primary" type="button" id="search-btn">Submit</button>
-        </div>
+
+<body class="background">
+  <div class="row">
+    <div class="col-md-4 col-md-offset-3">
+      <div class="page-header">
+        <h1>City Weather <i class="fa fa-thermometer-full" aria-hidden="true"></i></h1>
       </div>
+
+      <section class="beers">
+       
+        <h2 class="weather-list"></h2>       
+        
+      </section>
+
+      <form class="form">
+        <div class="form-group">
+          <input type="text" id="input1" class="city-input form-control" placeholder="Enter city"
+          </>
+        </div>
+             
+        <div>
+          <button class="btn btn-success post-city" type="button">Post</button>
+        <div>
+      </form>
+      
     </div>
   </div>
-  <script id="search-template" type="text/x-handlebars-template">
-    <h1>{{ title }}</h1>
-    <p>{{ description }}</p>
-    <h3>Written by: {{ author }}</h3>
-    <img src="{{ image }}"/>
-  </script>
-  <script type="text/javascript" src="script.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

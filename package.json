@@ -1,17 +1,23 @@
 {
-  "name": "lookbook",
+  "name": "weather_app",
   "version": "1.0.0",
-  "description": "",
+  "description": "A JQuery learning app working with a weather api",
   "main": "script.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "keywords": [
+    "jquery",
+    "weather",
+    "open",
+    "weather",
+    "map"
+  ],
+  "author": "Marina Shemesh",
   "license": "ISC",
   "dependencies": {
     "bootstrap": "^3.3.7",
     "font-awesome": "^4.7.0",
-    "handlebars": "^4.0.6",
-    "jquery": "^3.1.1"
+    "jquery": "^3.2.1"
   }
 }
